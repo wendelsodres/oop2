@@ -1,35 +1,28 @@
 <?php
 
-class Conta{
+class Pessoa{
 
-    private $numero;
-    private $cliente;
+    private $nome;
+    private $endereço;
 
-    public function setNumero($valor){
-        $this->numero = $valor;
+    public function setNome($valor){
+        $this->nome = $valor;
     }
 
-    public function getNumero(){
-        return $this->numero;
+    public function getNome(){
+        $nome = $this->nome;
+        return $this->transformUpperCase($nome);
     }
 
-    public function setCliente($cliente){
-        $this->cliente = $cliente;
-    }
-
-    public function getCliente(){
-        return $this->cliente;
-    }
+    private function transformUpperCase($palavra){
+        return strtoupper($palavra);
+    }   
     
+    public function setEndereco($endereco){
+        $this->endereco = $endereco;
+    }
+
+    public function getEndereco(){
+        return $this->endereco;
+    }
 }
-
-$conta1 = new Conta();
-
-$conta1->setNumero("51100");
-$conta1->setCliente("Wendel Sodré");
-
-echo "
-    <strong>Numero Conta </strong>{$conta1->getNumero()} <br>
-
-    <strong>Cliente: </strong> {$conta1->getCliente()}
-";
