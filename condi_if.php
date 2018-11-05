@@ -10,16 +10,13 @@
 <?php
 
     $idade = 22;
-
-    if(isset($idade)){
-        if(isset($idade) && $idade >= 21){
-            echo "<p>A idade {$idade} atingiu a maioridade jurídica</p>";
-        }else{
-            echo "<p>A idade {$idade} não atingiu a maioridade jurídica</p>";
-        }
+   
+    if($idade >= 21){
+        echo "<p>A idade {$idade} atingiu a maioridade jurídica</p>";
     }else{
-        echo "<p style=\"color:red\">Precisa informar a idade</p>";
+        echo "<p>A idade {$idade} não atingiu a maioridade jurídica</p>";
     }
+    
 ?>
 
 </body>
