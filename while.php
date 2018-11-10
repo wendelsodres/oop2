@@ -1,8 +1,10 @@
 <?php
 
-$contador = 5000;
+$inicio = 5000;
+$fim = 5543;
 
-while ($contador <= 5043) {
-    echo $contador . "<br>";
-    $contador ++;
+
+while ($inicio <= $fim) {
+    echo $inicio . "<br>";
+    $inicio ++;
 }
